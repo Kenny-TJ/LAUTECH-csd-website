@@ -1,0 +1,14 @@
+# Database config with real credentials — never commit this
+config/db.php
+
+# Student uploaded files
+uploads/
+
+# OS and editor junk
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# WAMP logs
+*.log

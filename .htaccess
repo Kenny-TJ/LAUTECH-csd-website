@@ -1,0 +1,8 @@
+# Prevent directory browsing
+Options -Indexes
+
+# Protect config folder from direct access
+<FilesMatch "^\.">
+  Order allow,deny
+  Deny from all
+</FilesMatch>

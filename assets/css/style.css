@@ -1,0 +1,271 @@
+/* =====================================================
+   LAUTECH CS Department — Main Stylesheet
+   Colours sourced directly from the LAUTECH logo:
+   Primary Red  : #DA251D  (ribbon banner)
+   Primary Gold : #C0A062  (crest & laurel)
+   Dark          : #1A1A1A
+   ===================================================== */
+
+:root {
+  --lautech-red:    #DA251D;
+  --lautech-gold:   #C0A062;
+  --lautech-dark:   #8B0000;   /* deep red for hover/darker states */
+  --lautech-light-gold: #E8C97A;
+  --lautech-cream:  #FDF8F0;
+  --text-body:      #2c2c2c;
+}
+
+/* ── Base ───────────────────────────────────────────── */
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  color: var(--text-body);
+}
+
+/* ── Announcement Bar ───────────────────────────────── */
+.announcement-bar {
+  background-color: var(--lautech-dark);
+  color: white;
+  padding: 8px 0;
+  font-size: 0.82rem;
+}
+.announcement-scroll { flex-wrap: wrap; }
+.ann-link { color: var(--lautech-gold); font-weight: 600; }
+.ann-link:hover { color: white; }
+
+/* ── Header ─────────────────────────────────────────── */
+.header-top {
+  background: linear-gradient(90deg, #1a0000 0%, #3d0000 100%);
+  color: white;
+}
+.school-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: white;
+}
+.dept-name {
+  font-size: 0.82rem;
+  color: var(--lautech-gold);
+  font-weight: 500;
+}
+
+/* ── Bootstrap Overrides ────────────────────────────── */
+.bg-primary           { background-color: var(--lautech-red) !important; }
+.btn-primary          { background-color: var(--lautech-red) !important;
+                        border-color: var(--lautech-red) !important; }
+.btn-primary:hover    { background-color: var(--lautech-dark) !important;
+                        border-color: var(--lautech-dark) !important; }
+.text-primary         { color: var(--lautech-red) !important; }
+.btn-outline-primary  { color: var(--lautech-red) !important;
+                        border-color: var(--lautech-red) !important; }
+.btn-outline-primary:hover { background-color: var(--lautech-red) !important;
+                              color: white !important; }
+.btn-success          { background-color: var(--lautech-red) !important;
+                        border-color: var(--lautech-red) !important; }
+.btn-success:hover    { background-color: var(--lautech-dark) !important; }
+.btn-outline-success  { color: var(--lautech-red) !important;
+                        border-color: var(--lautech-red) !important; }
+.btn-outline-success:hover { background-color: var(--lautech-red) !important;
+                              color: white !important; }
+.bg-success           { background-color: var(--lautech-red) !important; }
+.text-success         { color: var(--lautech-red) !important; }
+.border-success       { border-color: var(--lautech-red) !important; }
+.border-start.border-success { border-color: var(--lautech-gold) !important; }
+.table-success        { background-color: #fdf0e8 !important; }
+.badge.bg-success     { background-color: var(--lautech-red) !important; }
+.accordion-button:not(.collapsed) {
+  background-color: #fdf0e8;
+  color: var(--lautech-red);
+}
+.accordion-button:focus { box-shadow: none; }
+.list-group-item.active {
+  background-color: var(--lautech-red) !important;
+  border-color: var(--lautech-red) !important;
+}
+.nav-tabs .nav-link.active {
+  color: var(--lautech-red) !important;
+  border-bottom-color: var(--lautech-red) !important;
+  font-weight: 600;
+}
+.nav-tabs .nav-link:hover { color: var(--lautech-red); }
+
+/* ── Navbar ─────────────────────────────────────────── */
+.navbar.bg-primary { background: linear-gradient(90deg, #8B0000, #DA251D) !important; }
+.navbar-dark .navbar-nav .nav-link { color: rgba(255,255,255,0.92); }
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link.active { color: var(--lautech-gold); }
+.dropdown-menu { border: none; box-shadow: 0 6px 24px rgba(0,0,0,0.13); border-top: 3px solid var(--lautech-gold); }
+.dropdown-item:hover { background-color: #fff5f5; color: var(--lautech-red); }
+
+/* ── Hero ───────────────────────────────────────────── */
+.hero-section {
+  background: linear-gradient(135deg, #1a0000 0%, #8B0000 50%, #DA251D 100%);
+  min-height: 420px;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%; right: -10%;
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(192,160,98,0.15) 0%, transparent 70%);
+  border-radius: 50%;
+}
+.hero-section::after {
+  content: '';
+  position: absolute;
+  bottom: -2px; left: 0; right: 0;
+  height: 60px;
+  background: white;
+  clip-path: ellipse(55% 100% at 50% 100%);
+}
+
+/* ── Page Banner ────────────────────────────────────── */
+.page-banner {
+  background: linear-gradient(135deg, #1a0000 0%, #8B0000 60%, #DA251D 100%);
+  min-height: 140px;
+  padding: 30px 0;
+}
+
+/* ── Section Title ──────────────────────────────────── */
+.section-title {
+  font-weight: 800;
+  position: relative;
+  padding-bottom: 12px;
+}
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 50px; height: 3px;
+  background: linear-gradient(90deg, var(--lautech-red), var(--lautech-gold));
+  border-radius: 2px;
+}
+.section-title.text-center::after {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* ── Cards ──────────────────────────────────────────── */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 32px rgba(218,37,29,0.12) !important;
+}
+.quick-card .card-body { padding: 2rem 1.5rem; }
+
+/* ── Stats Strip ────────────────────────────────────── */
+.stats-strip {
+  background: linear-gradient(135deg, #1a0000 0%, #8B0000 100%);
+}
+.stat-number {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--lautech-gold);
+}
+.stat-label {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.8);
+}
+
+/* ── Event Date Box ─────────────────────────────────── */
+.event-date-box {
+  background: var(--lautech-red);
+  color: white;
+  border-radius: 8px;
+  padding: 8px 14px;
+  min-width: 58px;
+}
+.event-day   { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.event-month { font-size: 0.72rem; text-transform: uppercase; }
+
+/* ── Staff Cards ────────────────────────────────────── */
+.staff-card { border-radius: 10px; }
+.staff-photo-wrap { display: flex; justify-content: center; }
+.staff-photo {
+  width: 110px; height: 110px;
+  object-fit: cover;
+  border: 4px solid var(--lautech-gold);
+}
+
+/* ── News Cards ─────────────────────────────────────── */
+.news-card .card-footer { border-top: 1px solid #f0f0f0; }
+
+/* ── Footer ─────────────────────────────────────────── */
+.site-footer         { background: linear-gradient(180deg, #1a0000 0%, #0d0000 100%); color: #ccc; }
+.site-footer a       { color: #bbb; text-decoration: none; }
+.site-footer a:hover { color: var(--lautech-gold); }
+.footer-bottom       { background-color: #060000; color: #777; font-size: 0.82rem; }
+
+/* ── Breadcrumb separator colour ───────────────────── */
+.breadcrumb-item + .breadcrumb-item::before { color: var(--lautech-gold); }
+
+/* =====================================================
+   SCROLL ANIMATIONS
+   ===================================================== */
+
+/* Base state — hidden before animating in */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.65s ease, transform 0.65s ease;
+}
+.reveal.reveal-left {
+  transform: translateX(-40px);
+}
+.reveal.reveal-right {
+  transform: translateX(40px);
+}
+.reveal.reveal-scale {
+  transform: scale(0.9);
+  opacity: 0;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Visible state — triggered by JS IntersectionObserver */
+.reveal.visible {
+  opacity: 1;
+  transform: none;
+}
+
+/* Staggered children — cards in a row appear one by one */
+.stagger-children > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.stagger-children.visible > *:nth-child(1) { transition-delay: 0.05s; }
+.stagger-children.visible > *:nth-child(2) { transition-delay: 0.15s; }
+.stagger-children.visible > *:nth-child(3) { transition-delay: 0.25s; }
+.stagger-children.visible > *:nth-child(4) { transition-delay: 0.35s; }
+.stagger-children.visible > *:nth-child(5) { transition-delay: 0.45s; }
+.stagger-children.visible > *:nth-child(6) { transition-delay: 0.55s; }
+.stagger-children.visible > * {
+  opacity: 1;
+  transform: none;
+}
+
+/* Stat number count-up highlight */
+.stat-number { transition: color 0.3s ease; }
+
+/* Gold underline animated on section titles */
+.section-title::after {
+  transition: width 0.6s ease;
+}
+.section-title.visible::after { width: 50px; }
+
+/* Pulse on HOD welcome image */
+.hod-photo {
+  transition: box-shadow 0.4s ease;
+}
+.hod-photo:hover {
+  box-shadow: 0 0 0 8px rgba(192,160,98,0.3), 0 0 0 16px rgba(192,160,98,0.1) !important;
+}
